@@ -1,0 +1,124 @@
+
+
+Project Overview
+
+Project NameAI-Powered Personal Analytics AgentCategoryProductivity / Self-Analytics / AIData SourcesGoogle Calendar, GmailAI ComponentLarge Language Model (LLM) / Generative AITarget UsersProfessionals seeking data-driven self-assessmentOutputReports, Dashboards, Natural Language Summaries
+
+1. Problem Statement
+
+Modern professionals generate large volumes of work-related data across digital tools such as Google Calendar and Gmail. This data includes scheduled meetings, deadlines, task communications, and KPI-related updates. However, this information remains fragmented, unstructured, and difficult to analyse holistically over long periods of time.
+
+As a result, organisations and individuals face the following challenges:
+• Lack of clear visibility into how time is spent across a year
+• Tracking performance against Key Performance Indicators (KPIs) is manual and inconsistent
+• Identifying productivity patterns, bottlenecks, and high-impact activities is challenging
+• Annual or quarterly self-assessment requires significant manual effort and is prone to bias
+
+There is currently no unified, intelligent system that can:
+
+• Automatically aggregate data from multiple sources
+• Interpret work context from events and communications
+• Map activities to performance metrics (KPIs)
+• Generate actionable insights and summaries over extended timeframes
+
+
+
+2. Objective
+
+To design and develop an AI-powered personal analytics agent that can:
+• Consolidate one year of user activity data from Google services
+• Analyse and classify work-related actions with contextual intelligence
+• Evaluate performance in relation to defined KPIs
+• Provide structured insights, summaries, and reports for self-evaluation
+
+
+
+3. Expected Solution
+
+The solution is structured into five integrated layers, each responsible for a specific aspect of the data pipeline and intelligence workflow.
+
+
+3.1 Data Integration Layer
+The system will securely connect to Google Calendar and Gmail using official APIs and OAuth
+2.0 authentication. The agent will:
+• Extract calendar events — titles, timestamps, duration, recurrence patterns
+• Retrieve emails — metadata, threads, labels, and timestamps
+• Ensure secure, consent-based data access with no persistent credential storage
+
+
+3.2 Data Processing & Structuring
+Raw data ingested from Google services will undergo a rigorous transformation pipeline:
+• Cleaning and deduplication of overlapping or redundant records
+• Relevance filtering to separate work-related signals from noise
+• Structuring data into analysable formats suitable for AI processing
+
+Key transformations include:
+? Categorising calendar events — meetings, deep work, admin tasks, personal time
+? Identifying task-related or KPI-relevant emails
+? Linking communication threads with scheduled activities where possible
+
+3.3 Intelligent Analysis Layer (AI Component)
+An AI/LLM-based module will serve as the core intelligence engine. It will:
+• Interpret context from vague or abbreviated event titles and email content
+• Classify activities into meaningful, user-defined categories
+• Extract actionable signals including task assignments and deliverables completed
+• Map activities to predefined KPI frameworks defined by the user
+
+
+3.4 Analytics & Insight Generation
+The system will compute and surface a range of productivity metrics:
+• Time allocation breakdown — meetings vs focused work vs administrative tasks
+• Productivity trends — daily, weekly, and monthly patterns
+• KPI alignment and contribution analysis
+• Activity frequency distribution and workload heat maps
+
+
+3.5 Reporting & Output
+The agent will generate polished, structured reports and summaries:
+• Yearly summary reports with high-level productivity and KPI scores
+• Monthly and quarterly breakdowns for granular analysis
+• KPI performance insights with trend indicators
+• Natural language summaries that are easy to read and share
+
+Optional output channels include:
+? Interactive dashboard visualisations
+? Query-based interface — e.g. "What did I focus on in March?"
+
+
+
+4. Key Features
+
+
+?? Automated Data Aggregation
+
+Pulls data seamlessly from Google Calendar and Gmail with no manual export required.?? Context-Aware AI Interpretation
+
+LLM interprets ambiguous event titles and email content to derive true work intent.?? KPI Mapping & Tracking
+
+Maps real-world activities to user-defined performance indicators automatically.?? Personalised Insights
+
+Tailors analysis and recommendations based on individual work patterns and goals.
+
+?? Privacy-First Design
+
+OAuth 2.0 authentication ensures data stays secure and user-consented at all times.?? Continuous Improvement
+
+Optional feedback loop enables the agent to refine its classification over time.
+
+5. Constraints & Considerations
+
+
+Data PrivacyAll integrations use OAuth 2.0. No raw data is stored beyond session unless explicitly opted in by the user.Ambiguous DataIncomplete or vague inputs (e.g. 'Meeting') will be flagged and resolved via AI inference or user prompts.KPI MappingClear KPI definitions must be supplied by the user to ensure accurate classification and reporting.Data VolumeOne year of calendar and email data may require efficient batching and pagination for API requests.Noise FilteringAutomated filters will remove personal, promotional, and irrelevant communications before analysis.
+
+6. Expected Outcomes
+
+Upon successful implementation, the system will enable users to:
+
+?Gain a comprehensive view of their yearly work activity across all digital touchpoints?Understand how time and effort were distributed across projects and priorities?Evaluate performance against KPIs with minimal manual effort or bias?Make data-driven decisions to improve productivity, focus, and work-life balance?Generate shareable reports for performance reviews or personal career development
+
+
+
+
+
+
+
