@@ -30,7 +30,7 @@ EXCLUDE_LABELS = {"SPAM", "TRASH", "CATEGORY_PROMOTIONS", "CATEGORY_SOCIAL", "CA
 
 def get_date_query() -> str:
     """Returns Gmail search query string for data starting April 1st, 2025."""
-    return f"after:2025/04/01"
+    return "after:2025/04/01 -category:promotions -category:social"
 
 
 def decode_body(payload: dict) -> str:
@@ -132,7 +132,7 @@ def extract_message_details(msg: dict) -> dict:
     }
 
 
-def fetch_message_ids(service, query: str, max_results: int = 5000) -> list:
+def fetch_message_ids(service, query: str, max_results: int = 20000) -> list:
     """
     Fetches all message IDs matching a query using pagination.
 
