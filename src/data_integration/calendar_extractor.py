@@ -23,9 +23,9 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def get_time_range():
-    """Returns ISO 8601 timestamps for April 1st, 2025 to now (UTC)."""
+    """Returns ISO 8601 timestamps for December 1st, 2024 to now (UTC)."""
     now = datetime.now(timezone.utc)
-    start_date = datetime(2025, 4, 1, tzinfo=timezone.utc)
+    start_date = datetime(2024, 12, 1, tzinfo=timezone.utc)
     return start_date.isoformat(), now.isoformat()
 
 

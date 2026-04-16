@@ -29,8 +29,8 @@ EXCLUDE_LABELS = {"SPAM", "TRASH", "CATEGORY_PROMOTIONS", "CATEGORY_SOCIAL", "CA
 
 
 def get_date_query() -> str:
-    """Returns Gmail search query string for data starting April 1st, 2025."""
-    return "after:2025/04/01 -category:promotions -category:social"
+    """Returns Gmail search query string for data starting December 1st, 2024."""
+    return "after:2024/12/01 -category:promotions -category:social"
 
 
 def decode_body(payload: dict) -> str:
